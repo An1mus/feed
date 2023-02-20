@@ -1,18 +1,19 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+
+    <h1>This is {{ count }}</h1>
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import store from '../store';
 
-@Options({
-  components: {
-    HelloWorld,
+export default {
+  computed: {
+    count() {
+      return store.state.count;
+    },
   },
-})
-export default class HomeView extends Vue {}
+};
 </script>
