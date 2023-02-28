@@ -7,14 +7,14 @@ const routes: Array<RouteRecordRaw> = [
     name: 'home',
     component: HomeView,
   },
-  {
-    path: '/control',
-    name: 'control',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/ControlView.vue'),
-  },
+  // {
+  // path: '/control',
+  // name: 'control',
+  // route level code-splitting
+  // this generates a separate chunk (about.[hash].js) for this route
+  // which is lazy-loaded when the route is visited.
+  // component: () => import(/* webpackChunkName: "about" */ '../views/ControlView.vue'),
+  // },
 ];
 
 const router = createRouter({
